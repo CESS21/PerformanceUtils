@@ -6,7 +6,7 @@
 **/
 
 
-import * as T from "../lib/DataTypes";
+import * as T from "./lib/DataTypes";
 
 
 // Calculate Fatigue-Variability Product from supplied microcycle total INOL and
