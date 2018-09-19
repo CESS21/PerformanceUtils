@@ -1,4 +1,5 @@
 dest/
 .vs/
+.vscode/
 *.mdproj
 *.sln
