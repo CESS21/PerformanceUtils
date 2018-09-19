@@ -6,7 +6,7 @@
 **/
 
 
-import * as T from "./lib/DataTypes";
+import * as T from "../lib/DataTypes";
 
 
 // Calculate maximal repetition quantity from a supplied percentage intensity
