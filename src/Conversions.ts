@@ -9,6 +9,17 @@
 import * as T from "./lib/DataTypes";
 
 
+interface IFormula {
+
+    load(reps: T.Quantity, max: T.Load): T.Load;
+
+    max(reps: T.Quantity, load: T.Load): T.Load;
+
+    reps(intensity: T.Intensity): T.PartialQuantity;
+
+}
+
+
 class Brzycki {
 
     public static load(reps: T.Quantity, max: T.Load): T.Load {
@@ -45,7 +56,9 @@ function intensity(load: T.Load, max: T.Load): T.Intensity {
 // using Brzycki formula.
 function maxRepsFromIntensity(intensity: T.Intensity): T.Quantity {
 
-    return Math.floor(Brzycki.reps(intensity));
+    let formula: IFormula = Brzycki;
+
+    return Math.floor(formula.reps(intensity));
 
 }
 
@@ -54,7 +67,9 @@ function maxRepsFromIntensity(intensity: T.Intensity): T.Quantity {
 // repetition maximum load.
 function maxRepsFromLoads(load: T.Load, max: T.Load): T.Quantity {
 
-    return Math.floor(Brzycki.reps(intensity(load, max)));
+    let formula: IFormula = Brzycki;
+
+    return Math.floor(formula.reps(intensity(load, max)));
 
 }
 
@@ -63,7 +78,9 @@ function maxRepsFromLoads(load: T.Load, max: T.Load): T.Quantity {
 // performed, using Brzycki formula.
 function oneRepMax(reps: T.Quantity, load: T.Load): T.Load {
 
-    return Brzycki.max(reps, load);
+    let formula: IFormula = Brzycki;
+
+    return formula.max(reps, load);
 
 }
 
@@ -71,6 +88,8 @@ function oneRepMax(reps: T.Quantity, load: T.Load): T.Load {
 // Calculate maximal weight that can be moved for supplied quantity of reps by a lifter with specified one rep max, using Brzycki formula.
 function repMax(reps: T.Quantity, max: T.Load): T.Load {
 
-    return Brzycki.load(reps, max);
+    let formula: IFormula = Brzycki;
+
+    return formula.load(reps, max);
 
 }
