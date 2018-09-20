@@ -7,54 +7,10 @@
 
 
 import * as T from "./lib/DataTypes";
+import * as Formulas from "./lib/Formulas";
 
 
-interface IFormula
-{
-    load(
-        reps: T.Quantity,
-        max: T.Load
-        ): T.Load;
-
-    max(
-        reps: T.Quantity,
-        load: T.Load
-        ): T.Load;
-
-    reps(
-        intensity: T.Intensity
-        ): T.PartialQuantity;
-}
-
-
-class Brzycki
-{
-    public static load(
-        reps: T.Quantity,
-        max: T.Load
-        ): T.Load
-    {
-        return max * (37 - reps) / 36;
-    }
-
-    public static max(
-        reps: T.Quantity,
-        load: T.Load
-        ): T.Load
-    {
-        return load * 36 / (37 - reps);
-    }
-
-    public static reps(
-        intensity: T.Intensity
-        ): T.PartialQuantity
-    {
-        return 37 - intensity * 36;
-    }
-}
-
-
-let default_formula : IFormula = Brzycki;
+let default_formula : Formulas.Formula = Formulas.Brzycki;
 
 
 // Calculate percentage intensity from supplied load used and one repetition
@@ -71,7 +27,7 @@ function intensity(
 // Calculate maximal repetition quantity from a supplied percentage intensity.
 function maxRepsFromIntensity(
     intensity: T.Intensity,
-    formula: IFormula = default_formula
+    formula: Formulas.Formula = default_formula
     ): T.Quantity
 {
     return Math.floor(formula.reps(intensity));
@@ -83,7 +39,7 @@ function maxRepsFromIntensity(
 function maxRepsFromLoads(
     load: T.Load,
     max: T.Load,
-    formula: IFormula = default_formula
+    formula: Formulas.Formula = default_formula
     ): T.Quantity
 {
     return Math.floor(formula.reps(intensity(load, max)));
@@ -95,7 +51,7 @@ function maxRepsFromLoads(
 function oneRepMax(
     reps: T.Quantity,
     load: T.Load,
-    formula: IFormula = default_formula
+    formula: Formulas.Formula = default_formula
     ): T.Load
 {
     return formula.max(reps, load);
@@ -107,7 +63,7 @@ function oneRepMax(
 function repMax(
     reps: T.Quantity,
     max: T.Load,
-    formula: IFormula = default_formula
+    formula: Formulas.Formula = default_formula
     ): T.Load
 {
     return formula.load(reps, max);
