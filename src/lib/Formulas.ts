@@ -52,3 +52,30 @@ export class Brzycki
         return 37 - intensity * 36;
     }
 }
+
+
+export class Epley
+{
+    public static load(
+        reps: T.Quantity,
+        max: T.Load
+    ): T.Load
+    {
+        return max / (1 + reps / 30);
+    }
+
+    public static max(
+        reps: T.Quantity,
+        load: T.Load
+    ): T.Load
+    {
+        return load * (1 + reps / 30);
+    }
+
+    public static reps(
+        intensity: T.Intensity
+    ): T.PartialQuantity
+    {
+        return 30 * (1 / intensity - 1);
+    }
+}
