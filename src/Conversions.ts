@@ -18,7 +18,7 @@ let default_formula : Formulas.Formula = Formulas.Brzycki;
 function intensity(
     load: T.Load,
     max: T.Load
-    ): T.Intensity
+): T.Intensity
 {
     return load / max;
 }
@@ -28,7 +28,7 @@ function intensity(
 function maxRepsFromIntensity(
     intensity: T.Intensity,
     formula: Formulas.Formula = default_formula
-    ): T.Quantity
+): T.Quantity
 {
     return Math.floor(formula.reps(intensity));
 }
@@ -40,7 +40,7 @@ function maxRepsFromLoads(
     load: T.Load,
     max: T.Load,
     formula: Formulas.Formula = default_formula
-    ): T.Quantity
+): T.Quantity
 {
     return Math.floor(formula.reps(intensity(load, max)));
 }
@@ -52,7 +52,7 @@ function oneRepMax(
     reps: T.Quantity,
     load: T.Load,
     formula: Formulas.Formula = default_formula
-    ): T.Load
+): T.Load
 {
     return formula.max(reps, load);
 }
@@ -64,7 +64,7 @@ function repMax(
     reps: T.Quantity,
     max: T.Load,
     formula: Formulas.Formula = default_formula
-    ): T.Load
+): T.Load
 {
     return formula.load(reps, max);
 }

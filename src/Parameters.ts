@@ -14,7 +14,7 @@ import * as T from "./lib/DataTypes";
 function FVP(
     inol: T.INOL,
     req: T.REQ
-    ): T.FVP
+): T.FVP
 {
     return inol * req;
 }
@@ -25,7 +25,7 @@ function FVP(
 function INOL(
     intensity: T.Intensity,
     reps: T.Quantity
-    ): T.INOL
+): T.INOL
 {
     return reps / ((1 - intensity) * 100);
 }
@@ -36,7 +36,7 @@ function INOL(
 function REQ(
     reps: T.Quantity,
     maxReps: T.Quantity
-    ): T.REQ
+): T.REQ
 {
     return reps / maxReps;
 }
@@ -47,7 +47,7 @@ function REQ(
 function VFI(
     volume: T.RelativeVolume,
     inol: T.INOL
-    ): T.VFI
+): T.VFI
 {
     return volume / inol;
 }
