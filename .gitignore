@@ -2,3 +2,4 @@
 .vscode/
 *.mdproj
 *.sln
+__pycache__/
