@@ -106,3 +106,30 @@ export class McGlothin
         return (101.3 - 100 * intensity) / 2.67123;
     }
 }
+
+
+export class Lombardi
+{
+    public static load(
+        reps: T.Quantity,
+        max: T.Load
+    ): T.Load
+    {
+        return max / Math.pow(reps, 0.1);
+    }
+
+    public static max(
+        reps: T.Quantity,
+        load: T.Load
+    ): T.Load
+    {
+        return Math.pow(reps, 0.1) * load;
+    }
+
+    public static reps(
+        intensity: T.Intensity
+    ): T.PartialQuantity
+    {
+        return Math.pow(intensity, -10);
+    }
+}
