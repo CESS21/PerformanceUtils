@@ -1,5 +1,5 @@
 # PerformanceUtils
-# Formulas.py
+# formulas.py
 # Copyright (c) 2018 Performance Analytics
 # License: MIT
  
