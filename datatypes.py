@@ -7,7 +7,6 @@
 # TODO: Write class for Percentage. Temporarily aliased to float.
 Percentage = float
 
-
 FVP                   = float
 INOL                  = float
 Intensity             = Percentage
