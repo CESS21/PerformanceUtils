@@ -79,3 +79,30 @@ export class Epley
         return 30 * (1 / intensity - 1);
     }
 }
+
+
+export class McGlothin
+{
+    public static load(
+        reps: T.Quantity,
+        max: T.Load
+    ): T.Load
+    {
+        return max * (101.3 - 2.67123 * reps) / 100;
+    }
+
+    public static max(
+        reps: T.Quantity,
+        load: T.Load
+    ): T.Load
+    {
+        return 100 * load / (101.3 - 2.67123 * reps);
+    }
+
+    public static reps(
+        intensity: T.Intensity
+    ): T.PartialQuantity
+    {
+        return (101.3 - 100 * intensity) / 2.67123;
+    }
+}
