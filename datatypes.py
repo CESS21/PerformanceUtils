@@ -4,6 +4,9 @@
 # License: MIT
 
 
+# TODO: Write Bounded abstract base class. Will be used for runtime data
+# validation.
+
 # TODO: Write class for Percentage. Temporarily aliased to float.
 Percentage = float
 
