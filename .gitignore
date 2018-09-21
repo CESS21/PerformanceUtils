@@ -1,5 +1,5 @@
-dest/
 .vs/
 .vscode/
 *.mdproj
 *.sln
+__pycache__/

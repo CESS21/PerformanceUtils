@@ -1,2 +1,2 @@
 # PerformanceUtils
-Utility scripts for Google Sheets
+Performance Analytics Utilities
