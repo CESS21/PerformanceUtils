@@ -1,8 +1,9 @@
-# PerformanceUtils
-# formulas.py
-# Copyright (c) 2018 Performance Analytics
-# License: MIT
- 
+# -*- coding: utf-8 -*-
+"""One-Rep Maximum Formulas.
+
+This module provides classes for estimating one-rep maximum loads and related
+metrics using different formulas.
+"""
 
 from abc import ABC, abstractmethod
 import math
@@ -11,32 +12,72 @@ import datatypes as T
 
 
 class Formula(ABC):
+    """Abstract base class for one-repetition maximal load estimator classes."""
 
     @staticmethod
     @abstractmethod
-    def load(reps: T.Quantity, max: T.Load) -> T.Load:
+    def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
+        """Estimate one-repetition maximum load.
+
+        Args:
+            reps: Repetitions performed.
+            rep_max: Maximum load that can be performed for ``reps``
+                repetitions.
+
+        Returns:
+            Estimated one-rep maximum load.
+
+        """
         pass
-    
+
     @staticmethod
     @abstractmethod
-    def max(reps: T.Quantity, load: T.Load) -> T.Load:
+    def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
+        """Estimate maximal load that can be performed for a supplied number of
+        repetitions.
+
+        Args:
+            reps: Repetitions to estimate a maximal load for.
+            one_rep_max: One-repetition maximal load.
+
+        Returns:
+            Maximal load that can be performed for the supplied number of
+            repetitions.
+
+        """
         pass
-    
+
     @staticmethod
     @abstractmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
+        """Estimate maximum number of repetitions that can be performed at a
+        supplied intensity.
+
+        Args:
+            intensity: Intensity as coefficient of one-repetition maximal load.
+
+        Returns:
+            Maximal (real / float) number of repetitions that can be performed
+            at the supplied intensity.
+
+        """
         pass
 
 
 class Brzycki(Formula):
+    """One-repetition maximal load estimator using Brzycki formula.
+
+    https://en.wikipedia.org/wiki/One-repetition_maximum#Brzycki
+
+    """
 
     @staticmethod
-    def load(reps: T.Quantity, max: T.Load) -> T.Load:
-        return max * (37 - reps) / 36
-    
+    def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
+        return rep_max * 36 / (37 - reps)
+
     @staticmethod
-    def max(reps: T.Quantity, load: T.Load) -> T.Load:
-        return load * 36 / (37 - reps)
+    def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
+        return one_rep_max * (37 - reps) / 36
 
     @staticmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
@@ -44,14 +85,19 @@ class Brzycki(Formula):
 
 
 class Epley(Formula):
+    """One-repetition maximal load estimator using Epley formula.
+
+    https://en.wikipedia.org/wiki/One-repetition_maximum#Epley_formula
+
+    """
 
     @staticmethod
-    def load(reps: T.Quantity, max: T.Load) -> T.Load:
-        return max / (1 + reps / 30)
-    
+    def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
+        return rep_max * (1 + reps / 30)
+
     @staticmethod
-    def max(reps: T.Quantity, load: T.Load) -> T.Load:
-        return load * (1 + reps / 30)
+    def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
+        return one_rep_max / (1 + reps / 30)
 
     @staticmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
@@ -59,14 +105,19 @@ class Epley(Formula):
 
 
 class McGlothin(Formula):
+    """One-repetition maximal load estimator using McGlothin formula.
+
+    https://en.wikipedia.org/wiki/One-repetition_maximum#McGlothin
+
+    """
 
     @staticmethod
-    def load(reps: T.Quantity, max: T.Load) -> T.Load:
-        return max * (101.3 - 2.67123 * reps) / 100
-    
+    def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
+        return 100 * rep_max / (101.3 - 2.67123 * reps)
+
     @staticmethod
-    def max(reps: T.Quantity, load: T.Load) -> T.Load:
-        return 100 * load / (101.3 - 2.67123 * reps)
+    def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
+        return one_rep_max * (101.3 - 2.67123 * reps) / 100
 
     @staticmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
@@ -74,14 +125,19 @@ class McGlothin(Formula):
 
 
 class Lombardi(Formula):
+    """One-repetition maximal load estimator using Lombardi formula.
+
+    https://en.wikipedia.org/wiki/One-repetition_maximum#Lombardi
+
+    """
 
     @staticmethod
-    def load(reps: T.Quantity, max: T.Load) -> T.Load:
-        return max / (reps ** 0.1)
-    
+    def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
+        return reps ** 0.1 * rep_max
+
     @staticmethod
-    def max(reps: T.Quantity, load: T.Load) -> T.Load:
-        return reps ** 0.1 * load
+    def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
+        return one_rep_max / (reps ** 0.1)
 
     @staticmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
@@ -89,14 +145,19 @@ class Lombardi(Formula):
 
 
 class Mayhew(Formula):
+    """One-repetition maximal load estimator using Mayhew et al. formula.
+
+    https://en.wikipedia.org/wiki/One-repetition_maximum#Mayhew_et_al.
+
+    """
 
     @staticmethod
-    def load(reps: T.Quantity, max: T.Load) -> T.Load:
-        return max * (52.2 + 41.9 * (math.e ** (-0.055 * reps))) / 100
-    
+    def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
+        return 100 * rep_max / (52.2 + 41.9 * (math.e ** (-0.055 * reps)))
+
     @staticmethod
-    def max(reps: T.Quantity, load: T.Load) -> T.Load:
-        return 100 * load / (52.2 + 41.9 * (math.e ** (-0.055 * reps)))
+    def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
+        return one_rep_max * (52.2 + 41.9 * (math.e ** (-0.055 * reps))) / 100
 
     @staticmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
@@ -104,14 +165,19 @@ class Mayhew(Formula):
 
 
 class OConner(Formula):
+    """One-repetition maximal load estimator using O'Conner formula.
+
+    https://en.wikipedia.org/wiki/One-repetition_maximum#O'Conner_et_al.
+
+    """
 
     @staticmethod
-    def load(reps: T.Quantity, max: T.Load) -> T.Load:
-        return max / (1 + reps / 40)
-    
+    def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
+        return rep_max * (1 + reps / 40)
+
     @staticmethod
-    def max(reps: T.Quantity, load: T.Load) -> T.Load:
-        return load * (1 + reps / 40)
+    def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
+        return one_rep_max / (1 + reps / 40)
 
     @staticmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
@@ -119,14 +185,19 @@ class OConner(Formula):
 
 
 class Wathan(Formula):
+    """One-repetition maximal load estimator using Wathan formula.
+
+    https://en.wikipedia.org/wiki/One-repetition_maximum#Wathan
+
+    """
 
     @staticmethod
-    def load(reps: T.Quantity, max: T.Load) -> T.Load:
-        return max * (48.8 + 53.8 * (math.e ** (-0.075 * reps))) / 100
-    
+    def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
+        return 100 * rep_max / (48.8 + 53.8 * (math.e ** (-0.075 * reps)))
+
     @staticmethod
-    def max(reps: T.Quantity, load: T.Load) -> T.Load:
-        return 100 * load / (48.8 + 53.8 * (math.e ** (-0.075 * reps)))
+    def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
+        return one_rep_max * (48.8 + 53.8 * (math.e ** (-0.075 * reps))) / 100
 
     @staticmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
