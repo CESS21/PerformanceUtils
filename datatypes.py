@@ -1,30 +1,32 @@
-# PerformanceUtils
-# datatypes.py
-# Copyright (c) 2018 Performance Analytics
-# License: MIT
+# -*- coding: utf-8 -*-
+"""
+Training-related type aliases.
 
+This module provides type aliases for analysis-related primitive types.
 
-# TODO: Write Bounded abstract base class. Will be used for runtime data
-# validation.
+Todo:
+    * Write Bounded abstract base class. Will be used for runtime data
+    validation.
+    * Write Percentage class. Temporarily aliased to `float`.
+"""
 
-# TODO: Write class for Percentage. Temporarily aliased to float.
 Percentage = float
 
 # Fatigue-Variability Product.
-FVP                   = float
+FVP = float
 # Intensity * Number Of Lifts.
-INOL                  = float
-Intensity             = Percentage
-Load                  = float
-PartialQuantity       = float
-Quantity              = int
-RelativeVolume        = float
+INOL = float
+Intensity = Percentage
+Load = float
+PartialQuantity = float
+Quantity = int
+RelativeVolume = float
 # Relative Volume.
-RV                    = RelativeVolume
+RV = RelativeVolume
 RelativeVolumePercent = Percentage
 # Relative Volume: Percent.
-RVPercent             = RelativeVolumePercent
+RVPercent = RelativeVolumePercent
 # Repetition-Endurance Quotient.
-REQ                   = Percentage
+REQ = Percentage
 # Volume-Fatigue Index.
-VFI                   = float
+VFI = float
