@@ -18,7 +18,8 @@ class Formula(ABC):
     @staticmethod
     @abstractmethod
     def one_rep_max(reps: T.Quantity, rep_max: T.Load) -> T.Load:
-        """Estimate one-repetition maximum load.
+        """
+        Estimate one-repetition maximum load.
 
         Args:
             reps: Repetitions performed.
@@ -27,14 +28,15 @@ class Formula(ABC):
 
         Returns:
             Estimated one-rep maximum load.
-
         """
+
         pass
 
     @staticmethod
     @abstractmethod
     def rep_max(reps: T.Quantity, one_rep_max: T.Load) -> T.Load:
-        """Estimate maximal load that can be performed for a supplied number of
+        """
+        Estimate maximal load that can be performed for a supplied number of
         repetitions.
 
         Args:
@@ -44,14 +46,15 @@ class Formula(ABC):
         Returns:
             Maximal load that can be performed for the supplied number of
             repetitions.
-
         """
+
         pass
 
     @staticmethod
     @abstractmethod
     def reps(intensity: T.Intensity) -> T.PartialQuantity:
-        """Estimate maximum number of repetitions that can be performed at a
+        """
+        Estimate maximum number of repetitions that can be performed at a
         supplied intensity.
 
         Args:
@@ -60,8 +63,8 @@ class Formula(ABC):
         Returns:
             Maximal (real / float) number of repetitions that can be performed
             at the supplied intensity.
-
         """
+
         pass
 
 
