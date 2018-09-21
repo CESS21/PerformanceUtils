@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""One-Rep Maximum Formulas.
+"""
+One-Rep Maximum Formulas.
 
 This module provides classes for estimating one-rep maximum loads and related
 metrics using different formulas.
@@ -65,10 +66,10 @@ class Formula(ABC):
 
 
 class Brzycki(Formula):
-    """One-repetition maximal load estimator using Brzycki formula.
+    """
+    One-repetition maximal load estimator using Brzycki formula.
 
     https://en.wikipedia.org/wiki/One-repetition_maximum#Brzycki
-
     """
 
     @staticmethod
@@ -85,10 +86,10 @@ class Brzycki(Formula):
 
 
 class Epley(Formula):
-    """One-repetition maximal load estimator using Epley formula.
+    """
+    One-repetition maximal load estimator using Epley formula.
 
     https://en.wikipedia.org/wiki/One-repetition_maximum#Epley_formula
-
     """
 
     @staticmethod
@@ -105,10 +106,10 @@ class Epley(Formula):
 
 
 class McGlothin(Formula):
-    """One-repetition maximal load estimator using McGlothin formula.
+    """
+    One-repetition maximal load estimator using McGlothin formula.
 
     https://en.wikipedia.org/wiki/One-repetition_maximum#McGlothin
-
     """
 
     @staticmethod
@@ -125,10 +126,10 @@ class McGlothin(Formula):
 
 
 class Lombardi(Formula):
-    """One-repetition maximal load estimator using Lombardi formula.
+    """
+    One-repetition maximal load estimator using Lombardi formula.
 
     https://en.wikipedia.org/wiki/One-repetition_maximum#Lombardi
-
     """
 
     @staticmethod
@@ -145,10 +146,10 @@ class Lombardi(Formula):
 
 
 class Mayhew(Formula):
-    """One-repetition maximal load estimator using Mayhew et al. formula.
+    """
+    One-repetition maximal load estimator using Mayhew et al. formula.
 
     https://en.wikipedia.org/wiki/One-repetition_maximum#Mayhew_et_al.
-
     """
 
     @staticmethod
@@ -165,10 +166,10 @@ class Mayhew(Formula):
 
 
 class OConner(Formula):
-    """One-repetition maximal load estimator using O'Conner formula.
+    """
+    One-repetition maximal load estimator using O'Conner formula.
 
     https://en.wikipedia.org/wiki/One-repetition_maximum#O'Conner_et_al.
-
     """
 
     @staticmethod
@@ -185,10 +186,10 @@ class OConner(Formula):
 
 
 class Wathan(Formula):
-    """One-repetition maximal load estimator using Wathan formula.
+    """
+    One-repetition maximal load estimator using Wathan formula.
 
     https://en.wikipedia.org/wiki/One-repetition_maximum#Wathan
-
     """
 
     @staticmethod
