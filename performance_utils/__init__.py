@@ -2,3 +2,6 @@
 """
 Top-level module.
 """
+
+
+name = "performance_utils"
