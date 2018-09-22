@@ -9,7 +9,7 @@ metrics using different formulas.
 from abc import ABC, abstractmethod
 import math
 
-import PerformanceUtils.datatypes as T
+import performance_utils.datatypes as T
 
 
 class Formula(ABC):

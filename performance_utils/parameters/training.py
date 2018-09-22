@@ -6,7 +6,7 @@ Training parameter conversions.
 This module provides functions to calculate various training parameters.
 """
 
-import PerformanceUtils.datatypes as T
+import performance_utils.datatypes as T
 
 
 def fvp(inol: T.INOL, req: T.REQ) -> T.FVP:
