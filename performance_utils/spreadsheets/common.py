@@ -43,7 +43,7 @@ class Worksheet(ABC):
         self.name = name
 
     @abstractmethod
-    def retrieve(self: Worksheet, row: int, column: int) -> str:
+    def read(self: Worksheet, row: int, column: int) -> str:
         """
         Retrieves the content of a worksheet cell.
 
