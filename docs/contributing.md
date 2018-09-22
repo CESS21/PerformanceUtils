@@ -2,6 +2,9 @@
 
 ## Quality Assurance
 
+We use [Google's Python Style Guide](
+    https://github.com/google/styleguide/blob/gh-pages/pyguide.md).
+
 ### Linting, Type checking
 Ensure any code submitted is checked via `MyPy` and `Pylint`. If any code does
 not fully pass these checks, it will not be accepted.
