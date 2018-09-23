@@ -103,9 +103,6 @@ class AbstractCRUDWorkbook(ABC): #pylint: disable=too-few-public-methods
         name: Title of the spreadsheet workbook.
         _sheets: List of worksheets within the workbook.
         _IR: Internal representation of workbook.
-
-    Todo:
-        * Write the C, R, & U parts of CRUD interface.
     """
 
     name: str
