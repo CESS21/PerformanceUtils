@@ -12,7 +12,7 @@ Todo:
 
 
 from abc import ABC, abstractmethod
-import typing
+from typing import List
 
 
 class Worksheet(ABC):
@@ -29,12 +29,14 @@ class Worksheet(ABC):
     name: str
 
     @abstractmethod
-    def __init__(self: Worksheet, name: str) -> None:
+    def __init__(self, name: str) -> None:
         """
         Initializes `Worksheet` object.
 
-        Implementation needs to ensure that if the actual worksheet does not
-        exist, it should be created.
+        ***Needs to be executed by subclass.***
+
+        Subclass needs to ensure that if the actual worksheet does not exist, it
+        is created.
 
         Args:
             name: Title of the worksheet.
@@ -43,27 +45,22 @@ class Worksheet(ABC):
         self.name = name
 
     @abstractmethod
-    def read(self: Worksheet, row: int, column: int) -> str:
+    def read(self, row: int, column: int) -> str:
         """
         Retrieves the content of a worksheet cell.
 
         Args:
             row: Index of the row to retrieve cell content from.
             column: Index of the column to retrieve cell content from.
-        
+
         Returns:
             Cell contents.
         """
-        
+
         pass
-    
+
     @abstractmethod
-    def update(
-        self: Worksheet,
-        row: int,
-        column: int,
-        data: str
-        ) -> None:
+    def update(self, row: int, column: int, data: str) -> None:
         """
         Updates the content of a worksheet cell.
 
@@ -75,10 +72,10 @@ class Worksheet(ABC):
         pass
 
 
-class Workbook(ABC):
+class Workbook(ABC): #pylint: disable=too-few-public-methods
     """
     Abstract base class for spreadsheet workbook interfaces.
-    
+
     Attributes:
         name: Title of the spreadsheet workbook.
         sheets: List of worksheets within the workbook.
@@ -86,18 +83,20 @@ class Workbook(ABC):
     Todo:
         * Write the C & D parts of CRUD interface.
     """
-    
+
     name: str
-    sheets: typing.List[Worksheet]
+    sheets: List[Worksheet]
 
     @abstractmethod
-    def __init__(self: Workbook, name: str) -> None:
+    def __init__(self, name: str) -> None:
         """
         Initializes `Workbook` object.
 
-        Implementation needs to ensure that if the actual workbook does not
-        exist, it should be created.
-        
+        ***Needs to be executed by subclass.***
+
+        Subclass needs to ensure that if the actual workbook does not exist, it
+        is created.
+
         Args:
             name: Title of the spreadsheet workbook.
         """
