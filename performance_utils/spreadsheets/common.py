@@ -15,7 +15,7 @@ from abc import ABC, abstractmethod
 from typing import List
 
 
-class Worksheet(ABC):
+class AbstractCRUDWorksheet(ABC):
     """
     Abstract base class for worksheet interfaces.
 
@@ -72,7 +72,7 @@ class Worksheet(ABC):
         pass
 
 
-class Workbook(ABC): #pylint: disable=too-few-public-methods
+class AbstractCRUDWorkbook(ABC): #pylint: disable=too-few-public-methods
     """
     Abstract base class for spreadsheet workbook interfaces.
 
