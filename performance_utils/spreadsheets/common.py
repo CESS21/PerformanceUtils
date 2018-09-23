@@ -31,7 +31,7 @@ class AbstractCRUDWorksheet(ABC):
     @abstractmethod
     def __init__(self, name: str) -> None:
         """
-        Initializes `Worksheet` object.
+        Initializes `AbstractCRUDWorksheet` object.
 
         ***Needs to be executed by subclass.***
 
@@ -98,7 +98,7 @@ class AbstractCRUDWorkbook(ABC): #pylint: disable=too-few-public-methods
     @abstractmethod
     def __init__(self, name: str) -> None:
         """
-        Initializes `Workbook` object.
+        Initializes `AbstractCRUDWorkbook` object.
 
         ***Needs to be executed by subclass.***
 
