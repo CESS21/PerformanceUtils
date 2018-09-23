@@ -23,7 +23,7 @@ class AbstractCRUDWorksheet(ABC):
         name: Title of the worksheet.
 
     Todo:
-        * Write the C & D parts of CRUD interface.
+        * Write the C part of CRUD interface.
     """
 
     name: str
@@ -43,6 +43,14 @@ class AbstractCRUDWorksheet(ABC):
         """
 
         self.name = name
+
+    @abstractmethod
+    def delete(self) -> None:
+        """
+        Handles object destruction.
+        """
+
+        pass
 
     @abstractmethod
     def read(self, row: int, column: int) -> str:
@@ -81,7 +89,7 @@ class AbstractCRUDWorkbook(ABC): #pylint: disable=too-few-public-methods
         sheets: List of worksheets within the workbook.
 
     Todo:
-        * Write the C & D parts of CRUD interface.
+        * Write the C, R, & U parts of CRUD interface.
     """
 
     name: str
@@ -103,3 +111,31 @@ class AbstractCRUDWorkbook(ABC): #pylint: disable=too-few-public-methods
 
         self.name = name
         self.sheets = []
+    
+    @abstractmethod
+    def __enter__(self):
+        """
+        Called upon `with` block entry.
+
+        ***Needs to be executed by subclass.***
+        """
+
+        return self
+
+    @abstractmethod
+    def __exit__(self, exc_type, exc_value, traceback):
+        """
+        Called upon `with` block exit.
+
+        ***Needs to be executed by subclass.***
+        """
+
+        self.delete()
+
+    @abstractmethod
+    def delete(self) -> None:
+        """
+        Handles object destruction.
+        """
+
+        pass
