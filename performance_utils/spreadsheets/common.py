@@ -134,8 +134,6 @@ class AbstractCRUDWorkbook(ABC): #pylint: disable=too-few-public-methods
 
     @abstractmethod
     def delete(self) -> None:
-        """
-        Handles object destruction.
-        """
+        """Handles object destruction."""
 
         pass
