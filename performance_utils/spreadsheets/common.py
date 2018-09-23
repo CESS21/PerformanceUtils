@@ -85,7 +85,7 @@ class AbstractCRUDWorkbook(ABC): #pylint: disable=too-few-public-methods
     """
 
     name: str
-    sheets: List[Worksheet]
+    sheets: List[AbstractCRUDWorksheet]
 
     @abstractmethod
     def __init__(self, name: str) -> None:
