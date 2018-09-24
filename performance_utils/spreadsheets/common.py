@@ -33,12 +33,11 @@ class AbstractCRUDWorksheet(ABC):
     _workbook: "AbstractCRUDWorkbook"
 
     @abstractmethod
-    def __init__(
-        self,
-        workbook: "AbstractCRUDWorkbook",
-        name: str,
-        index: int = None
-        ) -> None:
+    def __init__(self,
+                 workbook: "AbstractCRUDWorkbook",
+                 name: str,
+                 index: int = None
+                 ) -> None:
         """
         Initializes `AbstractCRUDWorksheet` object.
 

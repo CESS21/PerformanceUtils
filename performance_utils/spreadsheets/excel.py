@@ -27,12 +27,11 @@ class Worksheet(common.AbstractCRUDWorksheet):
     _IR: openpyxl.worksheet.worksheet.Worksheet
     _workbook: "Workbook"
 
-    def __init__(
-        self,
-        workbook: "Workbook",
-        name: str,
-        index: int = None
-        ) -> None:
+    def __init__(self,
+                 workbook: "Workbook",
+                 name: str,
+                 index: int = None
+                 ) -> None:
         """
         Initializes `Worksheet` object.
 
