@@ -45,7 +45,7 @@ class LogUtils():
     @staticmethod
     def filter(function: Callable[[LogItem], bool], log: Log) -> List[Trace]:
         """
-        Filters through a log to obtain trace addresses
+        Filters through a log to obtain trace addresses.
         """
 
         # Helper generator.
