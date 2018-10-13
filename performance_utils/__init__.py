@@ -4,4 +4,4 @@ Top-level module.
 """
 
 
-name = "performance_utils"
+name = "performance_utils" #pylint: disable=invalid-name
