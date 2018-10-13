@@ -1,0 +1,369 @@
+[
+    {
+        "type": "Macrocycle",
+        "time": "2018-10-01",
+        "contents": [
+            {
+                "type": "Phase",
+                "subtype": "Strength",
+                "time": "2018-10-01",
+                "duration": {
+                    "days": 28
+                },
+                "contents": [
+                    {
+                        "type": "Mesocycle",
+                        "time": "2018-10-01",
+                        "contents": [
+                            {
+                                "type": "Period",
+                                "subtype": "Accumulation",
+                                "time": "2018-10-01",
+                                "duration": {
+                                    "days": 21
+                                },
+                                "contents": [
+                                    {
+                                        "type": "Microcycle",
+                                        "time": "2018-10-01",
+                                        "duration": {
+                                            "days": 7
+                                        },
+                                        "contents": [
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-01",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 1.0
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-03",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 0.8
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-05",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 0.9
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Microcycle",
+                                        "time": "2018-10-08",
+                                        "duration": {
+                                            "days": 7
+                                        },
+                                        "contents": [
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-08",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 1.0
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-10",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 0.8
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-12",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 0.9
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Microcycle",
+                                        "time": "2018-10-15",
+                                        "duration": {
+                                            "days": 7
+                                        },
+                                        "contents": [
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-15",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 1.0
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-17",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 0.8
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-19",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 0.9
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Period",
+                                "subtype": "Deload",
+                                "time": "2018-10-22",
+                                "duration": {
+                                    "days": 7
+                                },
+                                "modifiers": [0.7],
+                                "contents": [
+                                    {
+                                        "type": "Microcycle",
+                                        "time": "2018-10-22",
+                                        "duration": {
+                                            "days": 7
+                                        },
+                                        "contents": [
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-22",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 1.0
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-24",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 0.8
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Session",
+                                                "time": "2018-10-26",
+                                                "duration": {
+                                                    "days": 1
+                                                },
+                                                "contents": [
+                                                    {
+                                                        "type": "Set",
+                                                        "exercise": "Bench Press",
+                                                        "load": {
+                                                            "unit": "Intensity Coefficient",
+                                                            "value": 0.9
+                                                        },
+                                                        "quantity": 5,
+                                                        "contents": [
+                                                            {
+                                                                "type": "Repetition",
+                                                                "quantity": 10
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
