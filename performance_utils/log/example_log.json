@@ -1,9 +1,11 @@
 [
     {
+        "item_id": 1,
         "item": "Macrocycle",
         "time": "2018-10-01",
         "contents": [
             {
+                "item_id": 2,
                 "item": "Phase",
                 "subtype": "Strength",
                 "time": "2018-10-01",
@@ -12,10 +14,12 @@
                 },
                 "contents": [
                     {
+                        "item_id": 3,
                         "item": "Mesocycle",
                         "time": "2018-10-01",
                         "contents": [
                             {
+                                "item_id": 4,
                                 "item": "Period",
                                 "subtype": "Accumulation",
                                 "time": "2018-10-01",
@@ -24,6 +28,7 @@
                                 },
                                 "contents": [
                                     {
+                                        "item_id": 5,
                                         "item": "Microcycle",
                                         "time": "2018-10-01",
                                         "duration": {
@@ -31,6 +36,7 @@
                                         },
                                         "contents": [
                                             {
+                                                "item_id": 6,
                                                 "item": "Session",
                                                 "time": "2018-10-01",
                                                 "duration": {
@@ -38,6 +44,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 7,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -47,6 +54,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 8,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -55,6 +63,7 @@
                                                 ]
                                             },
                                             {
+                                                "item_id": 9,
                                                 "item": "Session",
                                                 "time": "2018-10-03",
                                                 "duration": {
@@ -62,6 +71,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 10,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -71,6 +81,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 11,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -79,6 +90,7 @@
                                                 ]
                                             },
                                             {
+                                                "item_id": 12,
                                                 "item": "Session",
                                                 "time": "2018-10-05",
                                                 "duration": {
@@ -86,6 +98,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 13,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -95,6 +108,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 14,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -105,6 +119,7 @@
                                         ]
                                     },
                                     {
+                                        "item_id": 15,
                                         "item": "Microcycle",
                                         "time": "2018-10-08",
                                         "duration": {
@@ -112,6 +127,7 @@
                                         },
                                         "contents": [
                                             {
+                                                "item_id": 16,
                                                 "item": "Session",
                                                 "time": "2018-10-08",
                                                 "duration": {
@@ -119,6 +135,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 17,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -128,6 +145,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 18,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -136,6 +154,7 @@
                                                 ]
                                             },
                                             {
+                                                "item_id": 19,
                                                 "item": "Session",
                                                 "time": "2018-10-10",
                                                 "duration": {
@@ -143,6 +162,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 20,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -152,6 +172,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 21,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -160,6 +181,7 @@
                                                 ]
                                             },
                                             {
+                                                "item_id": 22,
                                                 "item": "Session",
                                                 "time": "2018-10-12",
                                                 "duration": {
@@ -167,6 +189,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 23,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -176,6 +199,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 24,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -186,6 +210,7 @@
                                         ]
                                     },
                                     {
+                                        "item_id": 25,
                                         "item": "Microcycle",
                                         "time": "2018-10-15",
                                         "duration": {
@@ -193,6 +218,7 @@
                                         },
                                         "contents": [
                                             {
+                                                "item_id": 26,
                                                 "item": "Session",
                                                 "time": "2018-10-15",
                                                 "duration": {
@@ -200,6 +226,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 27,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -209,6 +236,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 28,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -217,6 +245,7 @@
                                                 ]
                                             },
                                             {
+                                                "item_id": 29,
                                                 "item": "Session",
                                                 "time": "2018-10-17",
                                                 "duration": {
@@ -224,6 +253,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 30,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -233,6 +263,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 31,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -241,6 +272,7 @@
                                                 ]
                                             },
                                             {
+                                                "item_id": 32,
                                                 "item": "Session",
                                                 "time": "2018-10-19",
                                                 "duration": {
@@ -248,6 +280,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 33,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -257,6 +290,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 34,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -269,6 +303,7 @@
                                 ]
                             },
                             {
+                                "item_id": 35,
                                 "item": "Period",
                                 "subtype": "Deload",
                                 "time": "2018-10-22",
@@ -278,6 +313,7 @@
                                 "modifiers": [0.7],
                                 "contents": [
                                     {
+                                        "item_id": 36,
                                         "item": "Microcycle",
                                         "time": "2018-10-22",
                                         "duration": {
@@ -285,6 +321,7 @@
                                         },
                                         "contents": [
                                             {
+                                                "item_id": 37,
                                                 "item": "Session",
                                                 "time": "2018-10-22",
                                                 "duration": {
@@ -292,6 +329,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 38,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -301,6 +339,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 39,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -309,6 +348,7 @@
                                                 ]
                                             },
                                             {
+                                                "item_id": 40,
                                                 "item": "Session",
                                                 "time": "2018-10-24",
                                                 "duration": {
@@ -316,6 +356,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 41,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -325,6 +366,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 42,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
@@ -333,6 +375,7 @@
                                                 ]
                                             },
                                             {
+                                                "item_id": 43,
                                                 "item": "Session",
                                                 "time": "2018-10-26",
                                                 "duration": {
@@ -340,6 +383,7 @@
                                                 },
                                                 "contents": [
                                                     {
+                                                        "item_id": 44,
                                                         "item": "Set",
                                                         "exercise": "Bench Press",
                                                         "load": {
@@ -349,6 +393,7 @@
                                                         "quantity": 5,
                                                         "contents": [
                                                             {
+                                                                "item_id": 45,
                                                                 "item": "Repetition",
                                                                 "quantity": 10
                                                             }
