@@ -6,7 +6,7 @@ Training log utilities.
 
 from datetime import datetime, timedelta
 import functools
-from typing import Callable, Dict, List, Optional, Union
+from typing import Callable, Dict, List
 import json
 
 import performance_utils.datatypes as T
