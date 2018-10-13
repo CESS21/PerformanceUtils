@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
+#pylint: disable=redefined-outer-name
 """
 Training log utilities.
 """
 
 
-from datetime import datetime, timedelta
-import functools
+from datetime import datetime
 from typing import Callable, Dict, List
 import json
-
-import performance_utils.datatypes as T
 
 LogItem = Dict[str, any]
 Log = List[LogItem]
@@ -29,9 +27,16 @@ def datetime_from_iso_format(dtstr: str) -> datetime:
         return datetime.strptime(dtstr, "%Y-%m-%d %H:%M:%S")
 
 
-class LogUtils(object):
+class LogUtils():
+    """Utilities for dealing with `Log` and related objects."""
+
     @staticmethod
     def trace_access(log: Log, trace: Trace) -> any:
+        """
+        Accesses an element of a `Log` tree using a `Trace` object to locate
+        it.
+        """
+
         item = log
         for key in trace:
             item = item[key]
@@ -43,7 +48,7 @@ class LogUtils(object):
         Filters through a log to obtain trace addresses
         """
 
-        # Generator for items.
+        # Helper generator.
         def helper(trace: Trace):
             # Descend to current level of recursion.
             level = LogUtils.trace_access(log, trace)
@@ -60,13 +65,14 @@ class LogUtils(object):
                     yield from helper(current_trace + ["contents"])
                 except KeyError:
                     pass
-        
-        return list(helper([])) 
+
+        return list(helper([]))
 
 
-log: Log = json.load(open("performance_utils/log/example_log.json"))
+log: Log = json.load(open("performance_utils/example_log.json"))
 
 def my_filter(item: LogItem) -> bool:
+    """Simple example filter."""
     return item["item_id"] == 12
 
 for trace in LogUtils.filter(my_filter, log):
