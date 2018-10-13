@@ -13,6 +13,9 @@ import performance_utils.datatypes as T
 
 LogItem = Dict[str, any]
 Log = List[LogItem]
+# Accessor address type; allows specifying location of an object in a deeply
+# nested structure.
+Trace = List[any]
 
 def datetime_from_iso_format(dtstr: str) -> datetime:
     """
@@ -28,16 +31,20 @@ def datetime_from_iso_format(dtstr: str) -> datetime:
 
 class LogUtils(object):
     @staticmethod
-    def trace_access(log: Log, trace: List[any]) -> any:
+    def trace_access(log: Log, trace: Trace) -> any:
         item = log
         for key in trace:
             item = item[key]
         return item
 
     @staticmethod
-    def filter(function: Callable[[LogItem], bool], log: Log) -> List[any]:
+    def filter(function: Callable[[LogItem], bool], log: Log) -> List[Trace]:
+        """
+        Filters through a log to obtain trace addresses
+        """
+
         # Generator for items.
-        def helper(trace):
+        def helper(trace: Trace):
             # Descend to current level of recursion.
             level = LogUtils.trace_access(log, trace)
 
