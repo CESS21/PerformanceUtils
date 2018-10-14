@@ -9,11 +9,13 @@ from datetime import datetime
 from typing import Callable, Dict, List
 import json
 
+
 LogItem = Dict[str, any]
 Log = List[LogItem]
 # Accessor address type; allows specifying location of an object in a deeply
 # nested structure.
 Trace = List[any]
+
 
 def datetime_from_iso_format(dtstr: str) -> datetime:
     """
